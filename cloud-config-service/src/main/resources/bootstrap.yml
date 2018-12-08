@@ -7,6 +7,6 @@ spring:
         git:
           uri: https://github.com/trailapps/Spring-boot-2-microservices.git
           clone-on-start: true
-          search-paths: 'cloud-config-service/src/main/resources/config/{application}'
+          search-paths: 'cloud-config-service/src/main/resources/config/'
 server:
   port: 8088

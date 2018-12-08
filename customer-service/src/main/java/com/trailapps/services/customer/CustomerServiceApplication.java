@@ -38,7 +38,10 @@ public class CustomerServiceApplication {
                 .apiInfo(new ApiInfoBuilder().version("1.0").title("Customer API").description("Documentation Customer API v1.0").build());
     }
 
+    @Bean
     CommandLineRunner commandLineRunner(CustomerRepository customerRepository) {
+        customerRepository.deleteAll();
+        ;
         return args -> {
             Stream.of(new Customer(UUID.randomUUID(), "John", "addr", "Duster", new Date()),
                     new Customer(UUID.randomUUID(), "John", "addr", "Micro", new Date()),
@@ -46,7 +49,7 @@ public class CustomerServiceApplication {
                     new Customer(UUID.randomUUID(), "John", "addr", "Terrano", new Date()),
                     new Customer(UUID.randomUUID(), "John", "addr", "Clio", new Date()),
                     new Customer(UUID.randomUUID(), "John", "addr", "Pulse", new Date())
-            )
+            ).forEach(customerRepository::save);
         };
 
     }

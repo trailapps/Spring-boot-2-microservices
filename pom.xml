@@ -15,8 +15,8 @@
         <module>customer-service</module>
         <module>vehicle-detail-service</module>
         <module>factory-service</module>
-        <!-- <module>gateway-service</module>
-        <module>proxy-service</module>-->
+        <module>gateway-service</module>
+        <module>proxy-service</module>
     </modules>
 
 </project>

@@ -1,4 +1,4 @@
-package com.trailapps.services.vehicledetailservice.model;
+package com.trailapps.services.factoryservice.model;
 
 import lombok.Data;
 
@@ -19,4 +19,7 @@ public class Customer {
     private Date orderedDate;
 
     private VehiclePart vehicleParts;
+
+    private Factory factory;
+
 }

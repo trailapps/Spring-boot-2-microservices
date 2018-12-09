@@ -1,7 +1,7 @@
-package com.trailapps.services.vehicledetailservice;
+package com.trailapps.services.factoryservice;
 
-import com.trailapps.services.vehicledetailservice.model.VehiclePart;
-import com.trailapps.services.vehicledetailservice.repository.VehiclePartRepository;
+import com.trailapps.services.factoryservice.model.VehiclePart;
+import com.trailapps.services.factoryservice.repository.VehiclePartRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

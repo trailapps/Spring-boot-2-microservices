@@ -1,9 +1,9 @@
-package com.trailapps.services.vehicledetailservice.service;
+package com.trailapps.services.factoryservice.service;
 
-import com.trailapps.services.vehicledetailservice.client.CustomerClient;
-import com.trailapps.services.vehicledetailservice.model.Customer;
-import com.trailapps.services.vehicledetailservice.model.VehiclePart;
-import com.trailapps.services.vehicledetailservice.repository.VehiclePartRepository;
+import com.trailapps.services.factoryservice.client.CustomerClient;
+import com.trailapps.services.factoryservice.model.Customer;
+import com.trailapps.services.factoryservice.model.VehiclePart;
+import com.trailapps.services.factoryservice.repository.VehiclePartRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -12,12 +12,12 @@ logging:
 
 zuul:
   routes:
-    department:
+    vehicle-part-service:
       path: /vehicle/**
       serviceId: vehicle-part-service
-    employee:
+    customer-service:
       path: /customer/**
       serviceId: customer-service
-    organization:
+    factory-service:
       path: /factory/**
       serviceId: factory-service

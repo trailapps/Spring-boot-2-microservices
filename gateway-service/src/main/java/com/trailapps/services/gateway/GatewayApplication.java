@@ -1,4 +1,4 @@
-package com.trailapps.services.factoryservice;
+package com.trailapps.services.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

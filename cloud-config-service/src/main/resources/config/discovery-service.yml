@@ -9,3 +9,20 @@ eureka:
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    enable-self-preservation: false # in case of network error Eureka can have its registry emptied
+    wait-time-in-ms-when-sync-empty: 0
+    eviction-interval-timer-in-ms: 20000 # defines interval between eviction job executions
+
+
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: "localhost:9092"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ["health", "info", "refresh"]

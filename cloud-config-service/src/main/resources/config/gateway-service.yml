@@ -5,6 +5,16 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8061/eureka/
+    register-with-eureka: false
+    fetch-registry: false
+    enabled: true
+    registryFetchIntervalSeconds: 10 # how often to fetch the registry from Eureka server
+    instanceInfoReplicationIntervalSeconds: 10 # how often to replicate instance changes to be replicated to Eureka server
+  instance:
+    leaseRenewalIntervalInSeconds: 10 # intervalSeconds between subsequent heartbeats sent to Eureka server
+    leaseExpirationDurationInSeconds: 20 # time that Eureka server waits since it received last heartbeat before it can evict this instance
+
+
 
 logging:
   pattern:
@@ -12,6 +22,10 @@ logging:
 
 spring:
   cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: "localhost:9092"
     gateway:
       discovery:
         locator:
@@ -35,3 +49,8 @@ spring:
             - Path=/factory/**
           filters:
             - RewritePath=/factory/(?<path>.*), /$\{path}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ["health", "info", "refresh"]
